@@ -1,0 +1,67 @@
+<ion-content>
+  <div *ngIf = "inRange" >
+    <ion-row>
+      <ion-col text-start padding-top>
+        <ion-title color="light" class="fw700">Google Map</ion-title>
+      </ion-col>
+      <ion-col text-end>
+        <ion-button (click)="loadMap()" shape="round" fill="outline" color="light" class="fw700">
+          <ion-icon slot="start" name="locate"></ion-icon>
+          Where I Am
+        </ion-button>
+      </ion-col>
+    </ion-row>
+ 
+
+   
+    <div class="map-wrapper">
+      <div id="map_center">
+        <img src="../../assets/icon/favicon.png" />
+      </div>
+      <div #map id="map"></div>
+    </div>
+    <div id="address">
+      <span>{{address}}</span>
+    </div> 
+   
+  <div>
+
+      <ion-button (click) = "takeSnap()">
+          Register Attendance
+        </ion-button>
+        <!--<ion-button (click)="setAttendance()">
+          Register Attendance
+        </ion-button> -->
+      
+        <img #waterMarkedImage>
+  
+ <!-- <ion-grid fixed>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="getLocationCoordinates()">
+          Request GPS Accuracy
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Longitude</ion-col>
+      <ion-col> {{locationCoords.longitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Latitude</ion-col>
+      <ion-col>{{locationCoords.latitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Accuracy</ion-col>
+      <ion-col>{{locationCoords.accuracy}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Timestamp</ion-col>
+      <ion-col>{{locationCoords.timestamp | date:'medium'}}</ion-col>
+    </ion-row>
+  </ion-grid> -->
+  
+  </div>
+</div>
+  </ion-content>
+  

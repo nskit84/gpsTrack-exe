@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button color="secondary"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+          <ion-text color="light">
+            <ion-text color="light" class="fw700">GPS Attebdance</ion-text>
+          </ion-text>
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="medium" >
+          <ion-icon name="notifications"></ion-icon>
+          <ion-badge color="dark" slot="end">2</ion-badge>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+      <ion-searchbar></ion-searchbar>
+      <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="medium" >
+          <ion-icon name="options"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+<ion-tabs>
+
+  <ion-tab-bar slot="top" color="dark" expand="full">      
+    <ion-tab-button tab="attends" >
+         <ion-icon name="flash"></ion-icon>
+         <ion-label>Attends</ion-label>
+   </ion-tab-button>
+  
+   <ion-tab-button tab="home" >
+          <ion-icon name="apps"></ion-icon>
+          <ion-label>Add Attends</ion-label>
+   </ion-tab-button>
+
+   <ion-tab-button (click)="logout()" >
+      <ion-icon name="log-out"></ion-icon>
+      <ion-label>Logout</ion-label>
+</ion-tab-button>
+  
+  </ion-tab-bar>  
+  </ion-tabs>
+  </ion-content>
